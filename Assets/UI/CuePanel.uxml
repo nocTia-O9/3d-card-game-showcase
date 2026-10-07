@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/GameplayUSS.uss?fileID=7433441132597879392&amp;guid=85892f87e17cb3a43846db9bb569e3de&amp;type=3#GameplayUSS" />
+    <engine:VisualElement style="flex-grow: 1;">
+        <engine:VisualElement style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/UI%20Elements/Scroll.png?fileID=2800000&amp;guid=a70251021ec2c459daaf508d3a5228b0&amp;type=3#Scroll&quot;); -unity-background-scale-mode: scale-to-fit; width: 800px; height: 700px; right: 600px; top: 200px; left: auto;">
+            <engine:Label text="购买成功" name="CueTxt" style="position: absolute; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=6989064e2bb2d6146bee02209523b643&amp;type=3#SmileySans-Oblique&quot;); font-size: 120px; top: 250px; right: auto; left: 200px;" />
+            <engine:Button text="确定" name="ConfirmBtn" class="turnbutton" style="position: absolute; -unity-background-scale-mode: scale-to-fit; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-image: url(&quot;project://database/Assets/Art/UI%20Elements/Button.png?fileID=2800000&amp;guid=1547f1fe317e34067b4317cb769df353&amp;type=3#Button&quot;); width: 300px; height: 100px; background-color: rgba(188, 188, 188, 0); right: auto; top: 550px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=6989064e2bb2d6146bee02209523b643&amp;type=3#SmileySans-Oblique&quot;); font-size: 50px; left: 250px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

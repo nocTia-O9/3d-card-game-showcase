@@ -1,0 +1,11 @@
+.turnbutton {
+}
+
+.turnbutton:hover {
+    scale: 1.1 1.1;
+}
+
+.turnbutton:active {
+    scale: 1.2 1.2;
+    -unity-background-image-tint-color: rgb(105, 105, 105);
+}

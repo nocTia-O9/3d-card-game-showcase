@@ -1,0 +1,31 @@
+.unity-progress-bar__container{
+	height:40px;
+	min-height:40px;
+}
+
+.unity-progress-bar__progress{
+	height:30px;
+	border-radius:8px;
+	margin:4px;
+	background-color:#50B81F;
+	transition:right 0.5s ease-in-out-circ,baground-color 0.5s ease-in-out-circ;
+}
+
+.unity-progress-bar__background{		
+	margin:0px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:10px;
+	border-color:black;
+	border-width:1px;
+}
+
+.highHP .unity-progress-bar__progress{
+	background-color:#50B81F;	
+}
+.mediumHP .unity-progress-bar__progress{
+	background-color:#E9D514;
+}
+
+.lowHP .unity-progress-bar__progress{
+	background-color:#BC1111;
+}

@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
+        <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1; width: 350px; height: 300px; position: absolute; right: 0;">
+            <engine:VisualElement picking-mode="Ignore" name="Gold" style="flex-grow: 1; position: absolute; width: 350px; height: 150px; top: 0; right: 0;">
+                <engine:VisualElement name="GoldIcon" picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/CardIcon/Textures/Icons_nobg/Gold_Parts_NOBG.png?fileID=2800000&amp;guid=01e6d7164764a4744b90cc0b24f7d548&amp;type=3#Gold_Parts_NOBG&quot;); -unity-background-scale-mode: scale-to-fit; width: 150px; height: 150px; position: absolute; top: auto; right: 200px;" />
+                <engine:Label text="999" name="GoldAmount" picking-mode="Ignore" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" style="position: absolute; right: 30px; top: 10px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=6989064e2bb2d6146bee02209523b643&amp;type=3#SmileySans-Oblique&quot;); font-size: 100px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 5px;" />
+            </engine:VisualElement>
+            <engine:VisualElement picking-mode="Ignore" name="HP" style="flex-grow: 1; position: absolute; width: 350px; height: 150px; top: 150px; right: 0;">
+                <engine:VisualElement name="HPIcon" picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Intents/buff_life_up.png?fileID=2800000&amp;guid=98d622e3aaa3e464a933a2720153fdae&amp;type=3#buff_life_up&quot;); -unity-background-scale-mode: scale-to-fit; width: 150px; height: 150px; position: absolute; top: auto; right: 200px;" />
+                <engine:Label text="999" name="HPValue" picking-mode="Ignore" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" style="position: absolute; right: 30px; top: 10px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=6989064e2bb2d6146bee02209523b643&amp;type=3#SmileySans-Oblique&quot;); font-size: 100px; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 5px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
