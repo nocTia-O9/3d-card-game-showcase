@@ -1,0 +1,74 @@
+name: Auto Green Wall
+
+on:
+  workflow_dispatch: # 支持在 GitHub 网页上手动一键触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate Random Commits
+        run: |
+          # 替换为你 GitHub 绑定的真实邮箱和用户名
+          git config --global user.email "noctia09@gmail.com"
+          git config --global user.name "nocTia-O9"
+
+          python - << 'EOF'
+          import datetime
+          import os
+          import random
+          import subprocess
+
+          # ==================== 配置区间 ====================
+          START_DATE = datetime.date(2025, 10, 20)     # 起始日期 (年, 月, 日)
+          END_DATE   = datetime.date(2026, 2, 25)   # 结束日期 (年, 月, 日)
+          PROBABILITY = 0.3                          # 每天提交概率 (0.7 = 70%)
+          MAX_COMMITS = 4                            # 每天最多提交次数 (形成深浅差异)
+          # ==================================================
+
+          curr = START_DATE
+          delta = datetime.timedelta(days=1)
+          total_commits = 0
+
+          while curr <= END_DATE:
+              if random.random() < PROBABILITY:
+                  daily_count = random.randint(1, MAX_COMMITS)
+                  for _ in range(daily_count):
+                      h = random.randint(9, 22)
+                      m = random.randint(0, 59)
+                      s = random.randint(0, 59)
+                      # 格式化日期字符串
+                      date_str = f"{curr.isoformat()} {h:02d}:{m:02d}:{s:02d} +0800"
+
+                      # 写入日志文件
+                      with open("log.txt", "a", encoding="utf-8") as f:
+                          f.write(f"Commit at {date_str}\n")
+
+                      # 同步设置 Author Date 与 Committer Date
+                      env = os.environ.copy()
+                      env["GIT_AUTHOR_DATE"] = date_str
+                      env["GIT_COMMITTER_DATE"] = date_str
+
+                      subprocess.run(["git", "add", "log.txt"], check=True)
+                      subprocess.run(["git", "commit", f"--date={date_str}", "-m", f"update {date_str}"], env=env, check=True)
+                      total_commits += 1
+              curr += delta
+
+          print(f"Total commits generated: {total_commits}")
+          EOF
+
+      - name: Push Commits
+        run: |
+          git push
